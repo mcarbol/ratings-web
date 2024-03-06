@@ -25,9 +25,9 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v1.10.0
         with:
-          registry: ${{ secrets.mcarbol }}
-          username: ${{ secrets.marcel.carbol@gmail.com }}
-          password: ${{ secrets.5Im0n302@ }}
+          registry: ${{ secrets.ACR_NAME }}
+          username: ${{ secrets.ACR_LOGIN }}
+          password: ${{ secrets.ACR_PASSWORD }}
           
       - name: Build and push staging images
         uses: docker/build-push-action@v2
